@@ -68,12 +68,16 @@ def get_shwifty(input, shiftBy):
     # value at the current index needs to be assigned to the index + shiftBy
     for i in range(len(input)):
         # but if current index + shiftBy is greater than the last index value it will be out of range
+        temp = input[i - shiftBy]
+        temp_2 = input[i]
+        print(f'I want {input[i]}...')
+        print(f'to be replaced by {temp}')
         if i + shiftBy > len(input)-1:
             print(f"CURRENT INDEX: {i} VALUE: {input[i]} meets this condition")
-            temp = input[i]
-            input[i] = input[i - shiftBy]
-            input[(i + shiftBy) - (len(input))] = temp
-        pass
+            # temp = input[i]
+            # input[i] = input[i - shiftBy]
+            # input[(i + shiftBy) - (len(input))] = temp
+        
     print(input)
 get_shwifty([1,2,3],1)
 
